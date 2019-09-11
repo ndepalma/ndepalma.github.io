@@ -1,0 +1,44 @@
+# Site settings
+title: Nick DePalma, PhD, Robotics and Interaction
+email: ndepalma@alum.mit.edu
+description: ""
+#baseurl: "http://www.media.mit.edu/~ndepalma"
+#url: "http://alumni.media.mit.edu/~ndepalma"
+username: ndepalma
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+ftp_host: 'ml.media.mit.edu'
+ftp_dir: '~/public_html'
+ftp_passive: false
+
+# optional
+ftp_username: 'ndepalma'     # default read from stdin
+
+collections:
+  research:
+    output: true
+  thoughts:
+    output: true
+
+scholar:
+  style: apa
+  locale: en
+
+  sort_by: none
+  order: ascending
+
+  source: ./_bibliography
+  bibliography: mine
+  bibliography_template: bibtemplate
+
+  replace_strings: true
+  join_strings:    true
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"

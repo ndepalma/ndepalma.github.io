@@ -8,11 +8,15 @@ var $square = $("<div />", {
 });
 
 // Initialize the grid
-var size = 15;
-var delay = 20;
 var pixmaps = [robot, ufo, arcade];
 var grid = new math.SparseMatrix()
-grid.resize([3000,3000])
+grid.resize([10000,10000])
+
+// some parameters
+var size = 15;
+var delay = 15;
+var nrotates = 500;
+
 
 /**
  * A function that rotates a square
@@ -24,25 +28,28 @@ function rotate_square(objhh, z_ord) {
 	  objhh.toggleClass('rotated');
 }
 
+function get_id(x,y) {
+    id = "U"+x.toString()+"x"+y.toString();
+    return id;
+}
+
+function does_exist(x,y) {
+    return !(grid.get([x,y]) == 0);
+}
+
 function create_block(x, y) {
  	  sq = $square.clone();
     //console.log(sq);
-    sq[0].style.left = (x*size+1).toString()+"px";
+    sq[0].style.left = (x*size).toString()+"px";
     sq[0].style.top = (y*size+1).toString()+"px";
-    sq[0].id = "U"+x.toString()+"x"+y.toString();
-    // if(Math.floor(Math.random()*5) == 0) {
-    //     sq[0].onmouseenter = function () {
-    //         rotate_square(this, 5);
-    //     }.bind(sq);
-    //     sq[0].onmouseout = function () {//
-    //         rotate_square(this, 0);
-    //     }.bind(sq);
-    // }
+    sq[0].id = get_id(x,y); 
     sq[0].style.zIndex = 0;
     //console.log("appending new gridcell");
     $("#background-id").append(sq);
-    
+
+    grid.set([x,y], 1);
 }
+
 
 /**
  * Draw a picture into the grid
@@ -69,7 +76,6 @@ function drawPic(x,y, w, h, pix) {
 }
 
 
-// $(document).ready(function () {
 function init() {
     // console.log("running init");
     var width = Math.max(/*$(document).width()*/20, screen.width);
@@ -101,6 +107,34 @@ function init() {
         aty = Math.floor(Math.random() * h*0.7);
         drawPic(atx,aty,w,h, pixmaps[whattodraw]);
     }
+
+    populated = new math.SparseMatrix();
+    populated.resize([10000,10000]);
+    for(j = 0;j < nrotates;j++) {
+        do {
+            atx = Math.floor(Math.random() * w*0.7);
+            aty = Math.floor(Math.random() * h*0.7);
+            // atx = 10;
+            // aty = 10;
+        } while(populated.get([atx,aty])==1);
+        populated.set([atx,aty],1);
+
+        if(!does_exist(atx, aty)) {
+            console.log("Creating...");
+            create_block(atx,aty);
+        }
+        sq = $("#"+get_id(atx,aty));
+        sq.css( "opacity", 1.0);
+        // if(Math.floor(Math.random()*5) == 0) {
+        sq[0].onmouseenter = function () {
+            console.log("Entered");
+            rotate_square(this, 5);
+        }.bind(sq);
+        sq[0].onmouseout = function () {//
+            rotate_square(this, 0);
+        }.bind(sq);
+    }
+
 }
 
 

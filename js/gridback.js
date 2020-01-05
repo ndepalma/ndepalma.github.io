@@ -11,7 +11,8 @@ var $square = $("<div />", {
 var size = 15;
 var delay = 20;
 var pixmaps = [robot, ufo, arcade];
-
+var grid = new math.SparseMatrix()
+grid.resize([3000,3000])
 
 /**
  * A function that rotates a square
@@ -21,6 +22,26 @@ function rotate_square(objhh, z_ord) {
     objhh.zIndex(z_ord);
 	  //objhh[0].style.zIndex = z_ord;
 	  objhh.toggleClass('rotated');
+}
+
+function create_block(x, y) {
+ 	  sq = $square.clone();
+    //console.log(sq);
+    sq[0].style.left = (x*size+1).toString()+"px";
+    sq[0].style.top = (y*size+1).toString()+"px";
+    sq[0].id = "U"+x.toString()+"x"+y.toString();
+    // if(Math.floor(Math.random()*5) == 0) {
+    //     sq[0].onmouseenter = function () {
+    //         rotate_square(this, 5);
+    //     }.bind(sq);
+    //     sq[0].onmouseout = function () {//
+    //         rotate_square(this, 0);
+    //     }.bind(sq);
+    // }
+    sq[0].style.zIndex = 0;
+    //console.log("appending new gridcell");
+    $("#background-id").append(sq);
+    
 }
 
 /**
@@ -37,8 +58,9 @@ function drawPic(x,y, w, h, pix) {
             ix = x+i;
             if(ix < 0 || ix >= w)
                 continue;
-            id = "#U"+ix.toString()+"x"+jy.toString();
             if(pix[j][i] !== "#FFFFFF") {
+                create_block(ix,jy);
+                id = "#U"+ix.toString()+"x"+jy.toString();
                 //console.log("Setting " + id + " to " + pix[j][i]);
                 $(id).css( "background-color",pix[j][i]);
             }
@@ -68,32 +90,17 @@ function init() {
     rows = 80;
     columns = 30;
     //add columns to the the temp row object
-    for (var j = 0; j < rows; j++) {
-    	  for (var i = 0; i < columns; i++) {
-    	      sq = $square.clone();
-            //console.log(sq);
-    	      sq[0].style.left = (i*size+1).toString()+"px";
-    	      sq[0].style.top = (j*size+1).toString()+"px";
-    	      sq[0].id = "U"+i.toString()+"x"+j.toString();
-            // if(Math.floor(Math.random()*5) == 0) {
-    	      //     sq[0].onmouseenter = function () {
-            //         rotate_square(this, 5);
-    	      //     }.bind(sq);
-       	    //     sq[0].onmouseout = function () {//
-    		    //         rotate_square(this, 0);
-    	      //     }.bind(sq);
-            // }
-            sq[0].style.zIndex = 0;
-            //console.log("appending new gridcell");
-    	      $("#background-id").append(sq);
-    	  }
-    }
-    // for(i = 0;i < 4;i++) {
-    //     whattodraw = Math.floor(Math.random() * pixmaps.length); 
-    //     atx = Math.floor(Math.random() * w*0.7);
-    //     aty = Math.floor(Math.random() * h*0.7);
-    //     drawPic(atx,aty,w,h, pixmaps[whattodraw]);
+    // for (var j = 0; j < rows; j++) {
+    // 	  for (var i = 0; i < columns; i++) {
+    //         create_block(i, j);
+    // 	  }
     // }
+    for(i = 0;i < 4;i++) {
+        whattodraw = Math.floor(Math.random() * pixmaps.length); 
+        atx = Math.floor(Math.random() * w*0.7);
+        aty = Math.floor(Math.random() * h*0.7);
+        drawPic(atx,aty,w,h, pixmaps[whattodraw]);
+    }
 }
 
 

@@ -18,6 +18,7 @@ body {
   image-rendering: pixelated;
   background-repeat: repeat;
   background-position: 0 0;
+  background-size: 15px;
 
 }
 
@@ -55,14 +56,15 @@ a:visited { color: #205caa; }
 }
 
 .square {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin: 0px;
     outline: 1px solid;
     display: inline-block;
     float: left;
     z-index: 0;
     background: #FFFFFF;
+    opacity: 0.6;
     border-color: #AAAAAA;
     position: absolute;
     -webkit-transition: all 0.3s ease-in-out;

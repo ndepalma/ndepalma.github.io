@@ -58,6 +58,7 @@ a:visited { color: #205caa; }
     float: left;
     z-index: 0;
     background: #FFFFFF;
+    border-color: #AAAAAA;
     position: absolute;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;

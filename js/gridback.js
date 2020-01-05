@@ -63,84 +63,89 @@ var $square = $("<div />", {
     class: 'square'
 });
 
-var size = 20;
+var size = 15;
 var grid = 0;//initGrid();//createArray(1,1);
 var delay = 20;
-
+var pixmaps = [robot, ufo, arcade];
 function test(objhh, z_ord) {
-	objhh[0].style.zIndex = z_ord;
+    //console.log(objhh);
+    objhh.zIndex(z_ord);
+	//objhh[0].style.zIndex = z_ord;
 	objhh.toggleClass('rotated');
 }
 
-function drawPic(x,y, w, h) {
-    console.log("Print robot");
-    console.log(robot);
-    for(j = 0;j < robot.length;j++) {
+function drawPic(x,y, w, h, pix) {
+    //console.log("Print robot");
+    //console.log(robot);
+    for(j = 0;j < pix.length;j++) {
 
         jy = y+j;
         if(jy < 0 || jy >= h)
             continue;
 
-        for(i = 0;i < robot[0].length;i++) {
+        for(i = 0;i < pix[0].length;i++) {
             ix = x+i;
             if(ix < 0 || ix >= w)
                 continue;
             id = "#U"+ix.toString()+"x"+jy.toString();
-            console.log("Setting " + id + " to " + robot[j][i]);
-            $(id).css( "background-color",robot[j][i]);
-        }
+            if(pix[j][i] !== "#FFFFFF") {
+                //console.log("Setting " + id + " to " + pix[j][i]);
+                $(id).css( "background-color",pix[j][i]);
+            }
+         }
     }
 
 }
 
 
-$(document).ready(function () {
-    console.log("running init");
+// $(document).ready(function () {
+function init() {
+    // console.log("running init");
     var width = Math.max(/*$(document).width()*/20, screen.width);
     var height = Math.max($(document).height(), screen.height);
     var w = width / size;
     var h = height / size;
-    console.log("Width: ");
-    console.log(width);
-    console.log("Height: ");
-    console.log(height);
+    // console.log("Width: ");
+    // console.log(width);
+    // console.log("Height: ");
+    // console.log(height);
     w = Math.floor(w);
     h = Math.floor(h);
-    console.log(w);
-    console.log(h);
+    // console.log(w);
+    // console.log(h);
     columns = w;
     rows = h;
     ///initGrid(w,h);
     //rows = 1;
     //add columns to the the temp row object
     for (var j = 0; j < rows; j++) {
-	for (var i = 0; i < columns; i++) {
-	    sq = $square.clone();
-            //console.log(sq);
-	    sq[0].style.left = (i*size).toString()+"px";
-	    sq[0].style.top = (j*size).toString()+"px";
-	    sq[0].id = "U"+i.toString()+"x"+j.toString();
-	    sq[0].test = j*size;
-            if(Math.floor(Math.random()*20) == 10) {
-	        sq[0].onmouseenter = function () {
-                    //console.log("NickTest");
-                    test(this, 1);
-	        }.bind(sq);
-                //sq[0].onmouseclick = function() {
-                ///    console.log("Test");
-                //}.bind(sq);
-	        sq[0].onmouseout = function () {//
-		    test(this, 0);
-	        }.bind(sq);
+    	for (var i = 0; i < columns; i++) {
+    	    sq = $square.clone();
+                //console.log(sq);
+    	    sq[0].style.left = (i*size).toString()+"px";
+    	    sq[0].style.top = (j*size).toString()+"px";
+    	    sq[0].id = "U"+i.toString()+"x"+j.toString();
+            if(Math.floor(Math.random()*5) == 0) {
+    	        sq[0].onmouseenter = function () {
+                    test(this, 5);
+    	        }.bind(sq);
+       	        sq[0].onmouseout = function () {//
+    		      test(this, 0);
+    	        }.bind(sq);
             }
             sq[0].style.zIndex = 0;
             //console.log("appending new gridcell");
-	    $("#background-id").append(sq);
-	}
+    	    $("#background-id").append(sq);
+    	}
     }
-
-    drawPic(1,1,w,h);
-});
+    for(i = 0;i < 4;i++) {
+        whattodraw = Math.floor(Math.random() * pixmaps.length); 
+        atx = Math.floor(Math.random() * w*0.7);
+        aty = Math.floor(Math.random() * h*0.7);
+        drawPic(atx,aty,w,h, pixmaps[whattodraw]);    
+    }
+    
+}
 
 
 //setInterval(repeat, 50);

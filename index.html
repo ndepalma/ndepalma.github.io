@@ -5,16 +5,23 @@ exclude: true
 
 <div class="home">
 
-  <!-- <h1>News</h1> -->
+    <!-- <h1>News</h1> -->
+    <br />
+    <br />
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a>
-        <p >{{post.excerpt}}</p>
-      </li>
-    {% endfor %}
-  </ul>
+    <ul class="posts">
+        <li>
+            {% for post in site.posts %}
+            <!-- <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+            <!-- <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}"> -->
+            <div class="post-link">{{ post.title }}</div>
+            <!-- </a> -->
+            <p >{{post.excerpt}}</p>
+            <br />
+            <hr>
+            <br />
 
+            {% endfor %}
+        </li>
+    </ul>
 </div>

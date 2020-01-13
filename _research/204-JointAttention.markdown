@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Joint Attention in Dynamic Environments"
-num: 204
+num: 300
 thumb: JA.gif
 categories: joint-attention part-based vision
 excerpt: Joint attention is a social phonemena involving the continuous exchange of referential gestures to direct attention for the purpose of reference resolution. It's typically directed toward targets external to ongoing dialog. This external target to the text itself is called exophoric referencing. To share context, this work is directed at the study of this process between humans and robots.

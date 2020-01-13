@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Thoughts and Essays
+title: Prose/Blog
 permalink: /thoughts/
 islast: true
 ---

@@ -120,7 +120,7 @@ function init() {
         populated.set([atx,aty],1);
 
         if(!does_exist(atx, aty)) {
-            console.log("Creating...");
+            // console.log("Creating...");
             create_block(atx,aty);
         }
         sq = $("#"+get_id(atx,aty));

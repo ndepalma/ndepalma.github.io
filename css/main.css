@@ -41,7 +41,7 @@ a:visited { color: #205caa; }
   zoom: 1;
   opacity: 1.0;
   position:relative;
-  background-color: #E0E0E0;
+  background-color: #f1f1f1;
 }
 
 .wraptop:before,
@@ -111,6 +111,11 @@ a:visited { color: #205caa; }
   font-family: Courier New, Helvetica, Arial, sans-serif;
   z-index: 4;
 
+}
+
+img[src~="thumbnail"] {
+    width:250px;
+    height:200px;
 }
 
 .site-title,
@@ -210,7 +215,7 @@ table.widetable, td {
     padding-right: 10px;
     padding-left: 10px;
     font-size: 100%;
-    border: 1px solid #bbb;
+    border: 0px solid #bbb;
     font-style: normal;
 }
 table.widetable, tbody tr > :first-child {
@@ -262,7 +267,7 @@ table.widetable, th{
 
 .posts {  list-style-type: none; }
 
-.posts li { margin-bottom: 30px; }
+.posts li { margin-bottom: 2px; margin-left: 20px }
 
 .posts .post-link {
   font-size: 24px;

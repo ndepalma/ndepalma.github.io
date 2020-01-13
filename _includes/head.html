@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
- 	<link rel="shortcut icon" href="http://alumni.media.mit.edu/~ndepalma/favicon.ico" />
+ 	<link rel="shortcut icon" href="http://www.media.mit.edu/favicon.ico" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl | prepend: site.url }}">
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  <script>
+	   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	                            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-27631966-1', 'auto');
-	  ga('send', 'pageview');
+	   ga('create', 'UA-27631966-1', 'auto');
+	   ga('send', 'pageview');
 
-	</script>
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/jquery.ui.core.js"></script>
-    <script src="../js/robot.json" > </script>
-    <script src="../js/ufo.json" > </script>
-    <script src="../js/arcade.json" > </script>
+	  </script>
+    <script src="{{ '/js/jquery-3.4.1.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+    <script src="{{ '/js/jquery.ui.core.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+    <script src="{{ '/js/robot.json' | prepend: site.baseurl | prepend: site.url }}" > </script>
+    <script src="{{ '/js/ufo.json' | prepend: site.baseurl | prepend: site.url }}" > </script>
+    <script src="{{ '/js/arcade.json' | prepend: site.baseurl | prepend: site.url }}" > </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.5/math.min.js" > </script>
-    <script src="../js/gridback.js" > </script>
+    <script src="{{ '/js/gridback.js' | prepend: site.baseurl | prepend: site.url }}" > </script>
 </head>

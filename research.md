@@ -4,7 +4,7 @@ title: Research Projects
 permalink: /research/
 ---
 Due to licensing restrictions, all of my results can be found in the various papers in my publications. This webpage is meant to help guide you through the papers and think about these problems in a clear, concise way. 
-<h3>Current and Freshly Completed Work </h3>
+<h3>Current and Recently Completed Work </h3>
 <hr />
 <ul class="posts">
 

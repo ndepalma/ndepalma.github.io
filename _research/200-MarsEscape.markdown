@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mars Escape [completed]"
+title:  "Mars escape [completed]"
 num: 210
 thumb: mars-thumb.jpg
 categories: crowdsourcing episodic-memory nexi 

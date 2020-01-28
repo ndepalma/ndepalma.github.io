@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Ceiling Bot [Closed]"
+title:  "Ceiling bot [Closed]"
 thumb: ceil-thumb.gif
 num: 205
 categories: always-on, ambient, ceiling, mobile
-excerpt: Ceiling bot was a project in *always on* ambient intelligence. In other words, how do you build a robot that uses wall power and not batteries, while still remaining mobile and actuated. The key insight being is that we pick the most architecturally vacant part of a building. 
+excerpt: Ceiling bot was a project in *always on* ambient intelligence. How will engineers one day build a robot that utilizes continuous power while still remaining mobile and actuated? Our idea was to run the robot on walls and ceilings. 
 ---
 
 

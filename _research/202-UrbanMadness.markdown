@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Urban Madness [completed]"
+title:  "Urban madness [completed]"
 num: 208
 thumb: urban-thumb.jpg
 categories: collaboration multi-robot human-robot-interaction
-excerpt: This research is in collaboration with <a href="http://web.stanford.edu/~phinds/">Dr. Pam Hinds</a> at Stanford and <a href="http://www.mit.edu/people/jhow/">Dr. Jon How</a> at MIT CSAIL to study the intricate, and fluid dynamics of teamwork with multiple robots, having mixed autonomy, interacting and being commanded by a single human leader/coworker. <br/> <br /> 
+excerpt: Urban madness was a collaboration with <a href="http://web.stanford.edu/~phinds/">Dr. Pam Hinds</a> and <a href="http://www.mit.edu/people/jhow/">Dr. Jon How</a> to study the intricate, and fluid dynamics of teamwork with multiple mixed autonomy robots, interacting and being commanded by a single human leader/coworker. <br/> <br /> 
 ---
 
 

@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Augmented Tangibles [completed]"
+title:  "Augmented tangibles [completed]"
 num: 209
 thumb: aug-tan.gif
 categories: augmented-reality tangibles ishii perlin
-excerpt: This project was for a class taught by <a href="http://mrl.nyu.edu/~perlin/">Dr. Ken Perlin</a> and <a href="http://web.media.mit.edu/~ishii/">Dr. Hiroshi Ishii</a> on a concept called Eccescopy developed and pioneered by Dr. Perlin. This project, jointly investigated with Anthony DeVincenzi, focuses on the interplay between virtual reality and reality when the two become fluidly intertwined. 
+excerpt: Augmented tangibles was a project in fusing virtual and real world environments fluidly. Anthony DeVincenzi and I applied this idea toward <a href="http://blog.kenperlin.com/?p=4844">eccescopy</a> by using iPads as portals to the actuated world. <br /> <br />
 ---
 <center>
 <iframe src="//player.vimeo.com/video/23294453" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/23294453">Augmented Tangibles</a> from <a href="http://vimeo.com/user230757">Anthony DeVincenzi</a> on <a href="https://vimeo.com">Vimeo</a>.</p>

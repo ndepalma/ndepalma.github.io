@@ -1,20 +1,20 @@
 ---
 layout: page
-title: Publications
+title: Research Publications
 permalink: /publications/
 ---
 
-### Journal Papers
----
+##### **Theses**
+{% bibliography -f mine-thesis %}
+
+##### **Journal Papers**
 {% bibliography -f mine-journals %}
 
 
-### Conference Papers
----
+##### **Conference Papers**
 {% bibliography -f mine-conferences %}
 
-### Workshop Papers
----
+##### **Workshop Papers**
 {% bibliography -f mine-workshops %}
 
 

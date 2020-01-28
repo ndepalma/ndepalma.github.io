@@ -114,9 +114,18 @@ a:visited { color: #205caa; }
 }
 
 img[src~="thumbnail"] {
-    width:250px;
-    height:200px;
+  width:250px;
+  height:200px;
 }
+
+ol.bibliography {
+  font-family: Palatino;
+  font-size: 90%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
 
 .site-title,
 .site-title:hover,
@@ -313,7 +322,7 @@ table.widetable, th{
 .post-content h6 {
   line-height: 1;
   font-weight: 300;
-  margin: 40px 0 20px;
+  margin: 40px 0 0px; /* 40px 0 20px */
 }
 
 .post-content h2 {
@@ -508,7 +517,7 @@ table.widetable, th{
     padding: 5px 10px;
     margin: 0;
   }
-
+  
   .post-header h1 { font-size: 36px; }
   .post-content h2 { font-size: 28px; }
   .post-content h3 { font-size: 22px; }

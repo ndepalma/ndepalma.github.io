@@ -2,21 +2,12 @@
 title: Nick DePalma, PhD, Robotics and Interaction
 email: ndepalma@alum.mit.edu
 description: ""
-#baseurl: "http://www.media.mit.edu/~ndepalma"
-url: "http://alumni.media.mit.edu/~ndepalma"
+url: "https://ndepalma.github.io"
 #url: "http://localhost:4000/"
-username: ndepalma
 
 # Build settings
 markdown: kramdown
 permalink: pretty
-
-ftp_host: 'alumni.media.mit.edu'
-ftp_dir: '~/public_html'
-ftp_passive: false
-
-# optional
-ftp_username: 'ndepalma'     # default read from stdin
 
 collections:
   research:
